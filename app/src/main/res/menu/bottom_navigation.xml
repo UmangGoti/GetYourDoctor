@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/hospitalsEnabled"
+        android:icon="@drawable/hospital_icon_selector"
+        android:iconTintMode="multiply"/>
+
+    <item
+        android:id="@+id/medicalsDisabled"
+        android:icon="@drawable/medical_icon_selector"/>
+
+    <item
+        android:id="@+id/searchDisabled"
+        android:icon="@drawable/search_icon_selector"/>
+
+    <item
+        android:id="@+id/profileDisabled"
+        android:icon="@drawable/profile_icon_selector"/>
+
+</menu>
