@@ -1,11 +1,56 @@
 package com.example.getyourdoctor
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.activity_home.*
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        bottomNavigation.setOnNavigationItemSelectedListener(this)
+        bottomNavigation.selectedItemId = R.id.hospitalsEnabled
+//        bottomNavigation.setOnNavigationItemSelectedListener { item: MenuItem ->
+//            when(item.itemId) {
+//                R.id.hospitalsEnabled -> {
+//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,HospitalListMenu()).commit()
+//                }
+//                R.id.medicalsDisabled -> {
+//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,MedicalListMenu()).commit()
+//                }
+//                R.id.searchDisabled -> {
+//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,SearchManu()).commit()
+//                }
+//                R.id.profileDisabled -> {
+//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,ProfileMenu()).commit()
+//                }
+//                true
+//            }
+//        }
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.hospitalsEnabled -> {
+                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,HospitalListMenu()).commit()
+                return true
+            }
+            R.id.medicalsDisabled -> {
+                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,MedicalListMenu()).commit()
+                return true
+            }
+            R.id.searchDisabled -> {
+                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,SearchManu()).commit()
+                return true
+            }
+            R.id.profileDisabled -> {
+                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,ProfileMenu()).commit()
+                return true
+            }
+        }
+        return false
     }
 }
