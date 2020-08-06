@@ -13,23 +13,6 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         setContentView(R.layout.activity_home)
         bottomNavigation.setOnNavigationItemSelectedListener(this)
         bottomNavigation.selectedItemId = R.id.hospitalsEnabled
-//        bottomNavigation.setOnNavigationItemSelectedListener { item: MenuItem ->
-//            when(item.itemId) {
-//                R.id.hospitalsEnabled -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,HospitalListMenu()).commit()
-//                }
-//                R.id.medicalsDisabled -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,MedicalListMenu()).commit()
-//                }
-//                R.id.searchDisabled -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,SearchManu()).commit()
-//                }
-//                R.id.profileDisabled -> {
-//                    supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,ProfileMenu()).commit()
-//                }
-//                true
-//            }
-//        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
