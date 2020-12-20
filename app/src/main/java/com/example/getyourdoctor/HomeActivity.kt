@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 return true
             }
             R.id.searchDisabled -> {
-                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,SearchManu()).commit()
+                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,SearchMenu()).commit()
                 return true
             }
             R.id.profileDisabled -> {
