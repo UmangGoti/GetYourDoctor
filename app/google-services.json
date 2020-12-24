@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1006664665393",
+    "project_id": "getyourdoctor-fc659",
+    "storage_bucket": "getyourdoctor-fc659.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006664665393:android:ebccbe4187de93ad048810",
+        "android_client_info": {
+          "package_name": "com.example.getyourdoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006664665393-hslspbl8gegh70sjfl5ap7005nug6h61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHtDvES7rC5SsIeVv4M7ZgIEpzZNWn-LA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1006664665393-hslspbl8gegh70sjfl5ap7005nug6h61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
