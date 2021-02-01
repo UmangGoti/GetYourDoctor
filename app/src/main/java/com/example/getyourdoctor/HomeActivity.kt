@@ -1,6 +1,5 @@
 package com.example.getyourdoctor
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -18,7 +17,7 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.hospitalsEnabled -> {
-                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,HospitalListMenu()).commit()
+                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,CityHospitalListMenu()).commit()
                 return true
             }
             R.id.medicalsDisabled -> {
