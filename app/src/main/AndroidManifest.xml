@@ -13,9 +13,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".CityList"
-            tools:ignore="Instantiatable"/>
+        android:theme="@style/NoActionBarTheme">
+        <activity android:name=".HospitalLocationActivity"></activity>
+        <activity android:name=".HospitalInfo" />
         <activity
             android:name=".CityHospitalListMenu"
             tools:ignore="Instantiatable" />
@@ -24,16 +24,21 @@
             tools:ignore="Instantiatable" />
         <activity
             android:name=".MedicalListMenu"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".SplashActivity">
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".adapter.CityAdapter" />
 
         <meta-data
             android:name="preloaded_fonts"

@@ -26,8 +26,8 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="8dp"
+        android:paddingTop="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation"/>
+        app:menu="@menu/bottom_navigation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

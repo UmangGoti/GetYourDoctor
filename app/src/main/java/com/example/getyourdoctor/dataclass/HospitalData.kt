@@ -1,49 +1,47 @@
 package com.example.getyourdoctor.dataclass
 
 class HospitalData{
-    private var hospName: String? = null
-    private var hospTime: String? = null
-    private var hospAddress: String? = null
-    private var hospInformation: String? = null
+    private var hName: String? = null
+    private var hTime: String? = null
+    private var hAdd: String? = null
+    private var hInfo: String? = null
 
-    fun HospitalData() {}
-
-    fun HospitalData(hospName: String?, Address: String?,Information: String?, Time: String?) {
-        this.hospName = hospName
-        this.hospTime = Time
-        this.hospAddress = Address
-        this.hospInformation = Information
+    fun HospitalData(hName: String?, hAdd: String?,hInfo: String?, hTime: String?) {
+        this.hName = hName
+        this.hTime = hTime
+        this.hAdd = hAdd
+        this.hInfo = hInfo
     }
 
-    fun gethospName(): String? {
-        return hospName
+    fun gethName(): String? {
+        return hName
     }
 
-    fun sethospName(hospName: String?) {
-        this.hospName = hospName
+    fun sethName(hName: String?) {
+        this.hName = hName
     }
 
-    fun gethospTime(): String? {
-        return hospTime
+    fun gethTime(): String? {
+        return hTime
     }
 
-    fun sethospTime(Time: String?) {
-        this.hospTime = Time
+    fun sethTime(hTime: String?) {
+        this.hTime = hTime
     }
 
-    fun gethospAddress(): String? {
-        return hospAddress
+    fun gethAdd(): String? {
+        return hAdd
     }
 
-    fun setAddress(Address: String?) {
-        this.hospAddress = Address
+    fun sethAdd(hAdd: String?) {
+        this.hAdd = hAdd
     }
 
-    fun gethospInformation(): String? {
-        return hospInformation
+    fun gethInfo(): String? {
+        return hInfo
     }
 
-    fun setInformation(Information: String?) {
-        this.hospInformation = Information
+    fun sethInfo(hInfo: String?) {
+        this.hInfo = hInfo
     }
 }
