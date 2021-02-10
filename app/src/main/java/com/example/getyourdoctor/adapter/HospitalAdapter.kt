@@ -52,10 +52,16 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
             intent.putExtra("HospName",listPosition.gethName())
             intent.putExtra("HospAddress",listPosition.gethAdd())
             intent.putExtra("HospInformation",listPosition.gethInfo())
+
             context.startActivity(intent)
         }
         holder.itemView.locationBtn.setOnClickListener {
             var intent = Intent(context, HospitalLocationActivity::class.java)
+            intent.putExtra("HospName",listPosition.gethName())
+            intent.putExtra("HospAddress",listPosition.gethAdd())
+            intent.putExtra("HospLat",listPosition.gethLat())
+            intent.putExtra("HospLong", listPosition.gethLong())
+
             context.startActivity(intent)
         }
     }
