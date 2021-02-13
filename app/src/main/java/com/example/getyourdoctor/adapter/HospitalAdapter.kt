@@ -43,7 +43,7 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
                 .also { hospitalViewholderClass.hospitalTime.text = it }
             hospitalViewholderClass.hospitalTime.setTextColor(Color.GREEN)
         }else if(listPosition.gethTime().equals("Close",ignoreCase = true)){
-            val also = listPosition.gethTime()?.toUpperCase(locale = Locale.ROOT)
+            listPosition.gethTime()?.toUpperCase(locale = Locale.ROOT)
                 .also { hospitalViewholderClass.hospitalTime.text = it }
             hospitalViewholderClass.hospitalTime.setTextColor(Color.RED)
         }

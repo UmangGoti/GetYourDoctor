@@ -93,7 +93,7 @@ class HospitalLocationActivity : AppCompatActivity(),  OnMapReadyCallback,
         val markerDestination = MarkerOptions()
             .position(destination)
             .title(name)
-            .icon(BitmapDescriptorFactory.fromResource(R.drawable.hospital))
+            .icon(BitmapDescriptorFactory.fromResource(R.drawable.ic_hospital_location))
         mMap.addMarker(markerDestination)
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(destination, 14f))
 

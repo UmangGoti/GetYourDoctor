@@ -39,7 +39,7 @@ class MedicalAdapter(
                     .also { mediaclViewholderClass.mTime.text = it }
                 mediaclViewholderClass.mTime.setTextColor(Color.GREEN)
             } else if (listPosition.getmTime().equals("Close", ignoreCase = true)) {
-                val also = listPosition.getmTime()?.toUpperCase(locale = Locale.ROOT)
+                listPosition.getmTime()?.toUpperCase(locale = Locale.ROOT)
                     .also { mediaclViewholderClass.mTime.text = it }
                 mediaclViewholderClass.mTime.setTextColor(Color.RED)
             }

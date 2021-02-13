@@ -20,7 +20,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".HospitalLocationActivity"></activity>
+        <activity android:name=".HospitalLocationActivity"/>
         <activity android:name=".HospitalInfo" />
         <activity
             android:name=".CityHospitalListMenu"
