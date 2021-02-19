@@ -11,13 +11,16 @@ class HospitalInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hospital_info)
-        var name:String = intent.getStringExtra("HospName")
-        var address:String = intent.getStringExtra("HospAddress")
-        var information:String = intent.getStringExtra("HospInformation")
+        val name = intent.getStringExtra("HospName")
+        val address = intent.getStringExtra("HospAddress")
+        val information = intent.getStringExtra("HospInformation")
+
         hName.text = name
         hName.setSingleLine()
         hName.isSelected = true
+
         hAddress.text = address
+
         hInformation.text = information
     }
 }
