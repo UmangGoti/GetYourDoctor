@@ -2,20 +2,13 @@ package com.example.getyourdoctor.dataclass
 
 class HospitalData{
     private var hName: String? = null
-    private var hTime: String? = null
     private var hAdd: String? = null
     private var hInfo: String? = null
     private var hLat: Double? = null
     private var hLong: Double? = null
-
-    fun HospitalData(hName: String?, hAdd: String?,hInfo: String?, hTime: String?, hLat: Double?, hLong: Double?) {
-        this.hName = hName
-        this.hTime = hTime
-        this.hAdd = hAdd
-        this.hInfo = hInfo
-        this.hLat = hLat
-        this.hLong = hLong
-    }
+    private var hTime1: String? = null
+    private var hTime2: String? = null
+    private  var hPhone: Double? =  null
 
     fun gethName(): String? {
         return hName
@@ -23,14 +16,6 @@ class HospitalData{
 
     fun sethName(hName: String?) {
         this.hName = hName
-    }
-
-    fun gethTime(): String? {
-        return hTime
-    }
-
-    fun sethTime(hTime: String?) {
-        this.hTime = hTime
     }
 
     fun gethAdd(): String? {
@@ -63,5 +48,29 @@ class HospitalData{
 
     fun sethLong(hLong: Double?) {
         this.hLong = hLong
+    }
+
+    fun gethTime1(): String? {
+        return hTime1
+    }
+
+    fun sethTime1(hTime1: String?) {
+        this.hTime1 = hTime1
+    }
+
+    fun gethTime2(): String? {
+        return hTime2
+    }
+
+    fun sethTime2(hTime2: String?) {
+        this.hTime2 = hTime2
+    }
+
+    fun gethPhone(): Long? {
+        return this.hPhone?.toLong()
+    }
+
+    fun sethPhone(hPhone: Double?) {
+        this.hPhone = hPhone
     }
 }

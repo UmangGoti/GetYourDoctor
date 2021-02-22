@@ -1,114 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HospitalInfo">
-
-    <TextView
-        android:id="@+id/hName"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
-        android:ellipsize="marquee"
-        android:textSize="@dimen/text_size_of_hospital_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/linearL1"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:backgroundTint="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hName">
-
-        <ImageView
-            android:id="@+id/clockIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_clockicon" />
-        <TextView
-            android:id="@+id/hTime"
-            style="?android:attr/listSeparatorTextViewStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
-            android:textSize="@dimen/text_size_of_label" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearL2"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:backgroundTint="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearL1">
-
-        <ImageView
-            android:id="@+id/callIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_callicon" />
-        <TextView
-            android:id="@+id/hNumber"
-            style="?android:attr/listSeparatorTextViewStyle"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
-            android:textSize="@dimen/text_size_of_label" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearL3"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:backgroundTint="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearL2">
-
-        <ImageView
-            android:id="@+id/locationIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_hospitallocationicon" />
-        <TextView
-            android:id="@+id/hAddress"
+        <LinearLayout
+            android:id="@+id/linearL1"
             style="?android:attr/listSeparatorTextViewStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorPrimary"
-            android:textSize="@dimen/text_size_of_label" />
-    </LinearLayout>
+            android:gravity="center"
+            android:paddingBottom="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <LinearLayout
-        android:id="@+id/linearL4"
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:backgroundTint="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearL3">
+            <TextView
+                android:id="@+id/hpName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:ellipsize="marquee"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_of_hospitalinfo_label" />
 
-        <ImageView
-            android:id="@+id/informationIcon"
-            android:layout_width="wrap_content"
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/linearL2"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_informationicon" />
-        <TextView
-            android:id="@+id/hInformation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/colorPrimary"
-            android:textSize="@dimen/text_size_of_label" />
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearL1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/clockIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_clockicon" />
+
+            <TextView
+                android:id="@+id/hpTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_of_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearL3"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearL2">
+
+            <ImageView
+                android:id="@+id/callIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_callicon" />
+
+            <TextView
+                android:id="@+id/hpNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_of_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearL4"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:paddingBottom="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearL3">
+
+            <ImageView
+                android:id="@+id/locationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_hospitallocationicon" />
+
+            <TextView
+                android:id="@+id/hpAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_of_label" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearL5"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearL4">
+
+            <ImageView
+                android:id="@+id/informationIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_informationicon" />
+
+            <TextView
+                android:id="@+id/hpInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_of_label" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -17,10 +17,6 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.*
-import com.google.android.gms.maps.model.BitmapDescriptorFactory.fromResource
-import kotlinx.android.synthetic.main.activity_hospital_info.*
-import kotlinx.android.synthetic.main.activity_hospital_info.hName
-import kotlinx.android.synthetic.main.activity_hospital_location.*
 
 class HospitalLocationActivity : AppCompatActivity(),  OnMapReadyCallback,
     GoogleMap.OnMarkerClickListener  {

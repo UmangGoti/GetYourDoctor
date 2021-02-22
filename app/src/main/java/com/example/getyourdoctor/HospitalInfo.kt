@@ -4,8 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_hospital_info.*
-import kotlinx.android.synthetic.main.activity_hospital_info.hName
-import kotlinx.android.synthetic.main.hospital_info.*
 
 class HospitalInfo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,13 +12,18 @@ class HospitalInfo : AppCompatActivity() {
         val name = intent.getStringExtra("HospName")
         val address = intent.getStringExtra("HospAddress")
         val information = intent.getStringExtra("HospInformation")
+        val time = intent.getStringExtra("HospTime")
+        val number = intent.getStringExtra("HospContact")
+        hpName.text = name
+        hpName.setSingleLine()
+        hpName.isSelected = true
 
-        hName.text = name
-        hName.setSingleLine()
-        hName.isSelected = true
+        hpAddress.text = address
 
-        hAddress.text = address
+        hpInformation.text = information
 
-        hInformation.text = information
+        hpTime.text = time
+
+        hpNumber.text = number
     }
 }

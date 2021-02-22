@@ -4,12 +4,6 @@ class MedicalData {
     private var mName: String? = null
     private var mTime: String? = null
 
-    fun HospitalData() {}
-
-    fun HospitalData(hospName: String?, Time: String?) {
-        this.mName = mName
-        this.mTime = mTime
-    }
 
     fun getmName(): String? {
         return mName

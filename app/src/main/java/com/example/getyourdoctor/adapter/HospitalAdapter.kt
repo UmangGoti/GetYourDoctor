@@ -14,8 +14,8 @@ import com.example.getyourdoctor.R
 import com.example.getyourdoctor.dataclass.HospitalData
 import kotlinx.android.synthetic.main.hospital_info.*
 import kotlinx.android.synthetic.main.hospital_info.view.*
+import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.text.toUpperCase as toUpperCase
 
 class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<HospitalData>) : RecyclerView.Adapter<HospitalAdapter.HospitalViewholderClass>() {
 
@@ -38,28 +38,34 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
         val hospitalViewholderClass = holder
         val listPosition = hospitalDataList!![position]
         hospitalViewholderClass.hospitalName.text = listPosition.gethName()
-        if (listPosition.gethTime().equals("Open",ignoreCase = true)){
-            listPosition.gethTime()?.toUpperCase(locale = Locale.ROOT)
-                .also { hospitalViewholderClass.hospitalTime.text = it }
+        hospitalViewholderClass.hospitalName.setSingleLine()
+        hospitalViewholderClass.hospitalName.isSingleLine = true
+        val cal = Calendar.getInstance()
+        val sdfHour = SimpleDateFormat("HH:mm")
+        val hour: String = sdfHour.format(cal.time)
+        if (listPosition.gethTime1()?.compareTo(hour)!! < 0 && (listPosition.gethTime2()?.compareTo(hour)!! > 0)){
+            hospitalViewholderClass.hospitalTime.text = "Open"
             hospitalViewholderClass.hospitalTime.setTextColor(Color.GREEN)
-        }else if(listPosition.gethTime().equals("Close",ignoreCase = true)){
-            listPosition.gethTime()?.toUpperCase(locale = Locale.ROOT)
-                .also { hospitalViewholderClass.hospitalTime.text = it }
+        }else{
+            hospitalViewholderClass.hospitalTime.text = "Close"
             hospitalViewholderClass.hospitalTime.setTextColor(Color.RED)
         }
+
         holder.itemView.setOnClickListener {
-            var intent = Intent(context,HospitalInfo::class.java)
-            intent.putExtra("HospName",listPosition.gethName())
-            intent.putExtra("HospAddress",listPosition.gethAdd())
-            intent.putExtra("HospInformation",listPosition.gethInfo())
+            var intent = Intent(context, HospitalInfo::class.java)
+            intent.putExtra("HospName", listPosition.gethName())
+            intent.putExtra("HospAddress", listPosition.gethAdd())
+            intent.putExtra("HospInformation", listPosition.gethInfo())
+            intent.putExtra("HospTime",listPosition.gethTime1()+" to "+listPosition.gethTime2())
+            intent.putExtra("HospContact",listPosition.gethPhone().toString())
 
             context.startActivity(intent)
         }
         holder.itemView.locationBtn.setOnClickListener {
             var intent = Intent(context, HospitalLocationActivity::class.java)
-            intent.putExtra("HospName",listPosition.gethName())
-            intent.putExtra("HospAddress",listPosition.gethAdd())
-            intent.putExtra("HospLat",listPosition.gethLat())
+            intent.putExtra("HospName", listPosition.gethName())
+            intent.putExtra("HospAddress", listPosition.gethAdd())
+            intent.putExtra("HospLat", listPosition.gethLat())
             intent.putExtra("HospLong", listPosition.gethLong())
 
             context.startActivity(intent)
