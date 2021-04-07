@@ -24,10 +24,6 @@ class HomeActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,MedicalListMenu()).commit()
                 return true
             }
-            R.id.searchDisabled -> {
-                supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,SearchMenu()).commit()
-                return true
-            }
             R.id.profileDisabled -> {
                 supportFragmentManager.beginTransaction().replace(R.id.homeframeLayout,ProfileMenu()).commit()
                 return true
