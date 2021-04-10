@@ -12,11 +12,6 @@
         android:title="Medicals" />
 
     <item
-        android:id="@+id/searchDisabled"
-        android:icon="@drawable/search_icon_selector"
-        android:title="Search" />
-
-    <item
         android:id="@+id/profileDisabled"
         android:icon="@drawable/profile_icon_selector"
         android:title="Profile" />
