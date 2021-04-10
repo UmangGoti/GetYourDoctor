@@ -17,7 +17,10 @@ class ProfileMenu : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_profile_menu, container, false)
+        val view: View =  inflater.inflate(R.layout.fragment_profile_menu, container, false)
+
+        
+        return view
     }
 
 }
