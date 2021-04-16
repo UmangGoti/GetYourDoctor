@@ -8,7 +8,7 @@ class HospitalData{
     private var hLong: Double? = null
     private var hTime1: String? = null
     private var hTime2: String? = null
-    private  var hPhone: Double? =  null
+    private  var hPhone: String? =  null
 
     fun gethName(): String? {
         return hName
@@ -66,11 +66,11 @@ class HospitalData{
         this.hTime2 = hTime2
     }
 
-    fun gethPhone(): Long? {
-        return this.hPhone?.toLong()
+    fun gethPhone(): String? {
+        return hPhone
     }
 
-    fun sethPhone(hPhone: Double?) {
+    fun sethPhone(hPhone: String?) {
         this.hPhone = hPhone
     }
 }
