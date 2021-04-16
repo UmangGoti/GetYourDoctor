@@ -15,12 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoActionBarTheme">
+        <activity android:name=".UserInfoActivity"></activity>
+        <activity android:name=".RegisterActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".HospitalLocationActivity"/>
+        <activity android:name=".HospitalLocationActivity" />
         <activity android:name=".HospitalInfo" />
         <activity
             android:name=".CityHospitalListMenu"

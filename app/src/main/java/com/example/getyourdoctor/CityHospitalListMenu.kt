@@ -39,7 +39,7 @@ class CityHospitalListMenu : Fragment() {
     ): View? {
         val view: View = inflater.inflate(R.layout.fragment_city_hospital_list_menu, container, false)
         spinnerDataList = ArrayList<String>()
-        databaseRefrence = FirebaseDatabase.getInstance("https://getyourdoctor-fc659-default-rtdb.firebaseio.com/").getReference(
+        databaseRefrence = FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/").getReference(
             "/Hospitals/City"
         )
         databaseRefrence.addValueEventListener(object : ValueEventListener{
@@ -67,7 +67,7 @@ class CityHospitalListMenu : Fragment() {
             AdapterView.OnItemClickListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 hospitalDataList = ArrayList()
-                var databaseRefrence1 = FirebaseDatabase.getInstance("https://getyourdoctor-fc659-default-rtdb.firebaseio.com/").getReference(
+                var databaseRefrence1 = FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/").getReference(
                     "/Hospitals/City"
                 ).child(spinnerDataList!![p2])
                 databaseRefrence1.addValueEventListener(object : ValueEventListener {

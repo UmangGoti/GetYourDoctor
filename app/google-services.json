@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "1006664665393",
-    "firebase_url": "https://getyourdoctor-fc659-default-rtdb.firebaseio.com",
-    "project_id": "getyourdoctor-fc659",
-    "storage_bucket": "getyourdoctor-fc659.appspot.com"
+    "project_number": "551492480563",
+    "firebase_url": "https://getyourdoctor-acf57-default-rtdb.firebaseio.com",
+    "project_id": "getyourdoctor-acf57",
+    "storage_bucket": "getyourdoctor-acf57.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1006664665393:android:ebccbe4187de93ad048810",
+        "mobilesdk_app_id": "1:551492480563:android:7f2276f6a81e5a2f373d46",
         "android_client_info": {
           "package_name": "com.example.getyourdoctor"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1006664665393-g4ro6s5tlhnr9hcfc7s54970t3gha8vc.apps.googleusercontent.com",
+          "client_id": "551492480563-vcbmvt28142fh81306ff980qt1hqm7i1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.getyourdoctor",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "1006664665393-hslspbl8gegh70sjfl5ap7005nug6h61.apps.googleusercontent.com",
+          "client_id": "551492480563-u1smv6nquti1t3o9maq5m437k0cgpk78.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCHtDvES7rC5SsIeVv4M7ZgIEpzZNWn-LA"
+          "current_key": "AIzaSyAJn8E27LWeZhTuRamLKsCPJrkPNAptJk0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1006664665393-hslspbl8gegh70sjfl5ap7005nug6h61.apps.googleusercontent.com",
+              "client_id": "551492480563-u1smv6nquti1t3o9maq5m437k0cgpk78.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
