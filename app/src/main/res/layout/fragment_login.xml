@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:fontFamily="casual"
+            android:fontFamily="@font/tinos_bold"
             android:text="LogIn"
             android:textColor="@color/black"
             android:textSize="45sp"
@@ -39,7 +39,7 @@
                 android:id="@+id/emailEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="@drawable/border_of_edittext"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="6dp"
                 android:hint="Email"
@@ -63,7 +63,7 @@
                 android:id="@+id/passwordEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
+                android:background="@drawable/border_of_edittext"
                 android:drawableStart="@drawable/ic_lock"
                 android:drawableLeft="@drawable/ic_lock"
                 android:drawablePadding="6dp"
@@ -80,7 +80,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="42dp"
             android:layout_marginEnd="32dp"
-            android:fontFamily="casual"
+            android:fontFamily="@font/tinos"
             android:text="Login"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -95,7 +95,8 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
-            android:fontFamily="casual"
+            android:fontFamily="@font/tinos"
+            android:gravity="center"
             android:text="Not Registered ? Then Sign Up"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -103,20 +104,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/hospitalTv"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="32dp"-->
-<!--            android:layout_marginTop="32dp"-->
-<!--            android:layout_marginEnd="32dp"-->
-<!--            android:fontFamily="casual"-->
-<!--            android:text="Login For Hospital"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="20sp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/registerTv"/>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

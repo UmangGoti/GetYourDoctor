@@ -2,6 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/tienne_black</item>
+        <item>@font/tinos</item>
         <item>@font/tinos_bold</item>
     </array>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HospitalInfo">
+    tools:context=".MedicalInfo">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -23,12 +23,12 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimary"
                 android:gravity="center"
-                android:paddingBottom="38dp"
+                android:paddingBottom="35dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/hpName"
+                    android:id="@+id/mcName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -64,7 +64,7 @@
                     android:src="@drawable/ic_clockicon" />
 
                 <TextView
-                    android:id="@+id/hpTime"
+                    android:id="@+id/mcTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
@@ -95,7 +95,7 @@
                     android:src="@drawable/ic_callicon" />
 
                 <TextView
-                    android:id="@+id/hpNumber"
+                    android:id="@+id/mcNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
@@ -126,40 +126,8 @@
                     android:src="@drawable/ic_hospitallocationicon" />
 
                 <TextView
-                    android:id="@+id/hpAddress"
+                    android:id="@+id/mcAddress"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="35dp"
-                    android:layout_marginEnd="5dp"
-                    android:backgroundTint="@color/colorPrimary"
-                    android:fontFamily="@font/tinos"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/text_size_of_label" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearL5"
-                style="?android:attr/listSeparatorTextViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:backgroundTint="@color/white"
-                android:orientation="horizontal"
-                android:paddingBottom="50dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearL4">
-
-                <ImageView
-                    android:id="@+id/informationIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start|top"
-                    android:layout_marginStart="5dp"
-                    android:src="@drawable/ic_informationicon" />
-
-                <TextView
-                    android:id="@+id/hpInformation"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="35dp"
                     android:layout_marginEnd="5dp"
@@ -171,19 +139,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/tinos"
-        android:text="Pay"
-        android:textColor="@color/white"
-        android:drawableLeft="@drawable/ic_card"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
