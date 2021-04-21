@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="marquee"
+                android:fontFamily="@font/tinos"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_of_hospital_label" />
 
@@ -49,15 +50,15 @@
             </LinearLayout>
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/locationBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="8dp"
-            android:src="@drawable/ic_location"
-            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-            app:layout_constraintEnd_toEndOf="@+id/linearLayout" />
+<!--        <ImageView-->
+<!--            android:id="@+id/locationBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="32dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:src="@drawable/ic_location"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/linearLayout" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

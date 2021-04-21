@@ -15,8 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoActionBarTheme">
-        <activity android:name=".UserInfoActivity"/>
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MedicalLocationActivity"/>
+        <activity android:name=".MedicalInfo" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -26,9 +26,11 @@
         <activity android:name=".HospitalInfo" />
         <activity
             android:name=".CityHospitalListMenu"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
         <activity
             android:name=".ProfileMenu"
+            android:screenOrientation="portrait"
             tools:ignore="Instantiatable" />
         <activity
             android:name=".MedicalListMenu"

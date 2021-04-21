@@ -58,15 +58,9 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
             intent.putExtra("HospInformation", listPosition.gethInfo())
             intent.putExtra("HospTime",listPosition.gethTime1()+" to "+listPosition.gethTime2())
             intent.putExtra("HospContact",listPosition.gethPhone().toString())
-
-            context.startActivity(intent)
-        }
-        holder.itemView.locationBtn.setOnClickListener {
-            var intent = Intent(context, HospitalLocationActivity::class.java)
-            intent.putExtra("HospName", listPosition.gethName())
-            intent.putExtra("HospAddress", listPosition.gethAdd())
-            intent.putExtra("HospLat", listPosition.gethLat())
-            intent.putExtra("HospLong", listPosition.gethLong())
+            intent.putExtra("HospName1", listPosition.gethName())
+            intent.putExtra("HospLat1", listPosition.gethLat())
+            intent.putExtra("HospLong1", listPosition.gethLong())
 
             context.startActivity(intent)
         }

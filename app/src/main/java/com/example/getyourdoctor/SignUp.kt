@@ -10,10 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
@@ -51,7 +48,7 @@ class SignUp : Fragment() {
                 cal.set(Calendar.YEAR, year)
                 cal.set(Calendar.MONTH, monthOfYear)
                 cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-                updateDateInView(view)
+                updateDateInView()
             }
         }
         view.dobBtn.setOnClickListener(object : View.OnClickListener {
@@ -86,6 +83,12 @@ class SignUp : Fragment() {
                             currentUserDb?.child("Contact")?.setValue(contactEt.text.toString())
                             currentUserDb?.child("Dob")?.setValue(dobEt.text.toString())
                             currentUserDb?.child("Email")?.setValue(emailEt.text.toString())
+
+
+                            var checkedId = view.radioGrp.checkedRadioButtonId
+                            val gender = view.findViewById<RadioButton>(checkedId)
+                            currentUserDb?.child("Gender")?.setValue(gender.text)
+
                             Toast.makeText(context,"Sign Up successful", Toast.LENGTH_SHORT).show()
 
                         } else {
@@ -101,7 +104,7 @@ class SignUp : Fragment() {
         }
         return view
     }
-    private fun updateDateInView(view: View) {
+    private fun updateDateInView() {
         val myFormat = "dd/MM/yyyy" // mention the format you need
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         textview_date!!.text = sdf.format(cal.getTime())

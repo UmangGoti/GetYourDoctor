@@ -14,6 +14,9 @@ class HospitalInfo : AppCompatActivity() {
         val information = intent.getStringExtra("HospInformation")
         val time = intent.getStringExtra("HospTime")
         val number = intent.getStringExtra("HospContact")
+        val hname = intent.getStringExtra("HospName1")
+        val latitude:Double = intent.getDoubleExtra("HospLat1",21.22)
+        val longitude:Double = intent.getDoubleExtra("HospLong1",73.22)
         hpName.text = name
         hpName.setSingleLine()
         hpName.isSelected = true
@@ -25,5 +28,14 @@ class HospitalInfo : AppCompatActivity() {
         hpTime.text = time
 
         hpNumber.text = number
+        linearL4.setOnClickListener {
+            var intent = Intent(applicationContext, HospitalLocationActivity::class.java)
+            intent.putExtra("HospName2",hname)
+            intent.putExtra("HospLat2", latitude)
+            intent.putExtra("HospLong2", longitude)
+
+            startActivity(intent)
+
+        }
     }
 }
