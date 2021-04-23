@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.IntegerRes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.getyourdoctor.HospitalInfo
 import com.example.getyourdoctor.HospitalLocationActivity
@@ -43,11 +44,14 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
         val cal = Calendar.getInstance()
         val sdfHour = SimpleDateFormat("HH:mm")
         val hour: String = sdfHour.format(cal.time)
+        var flag: String = "0"
         if (listPosition.gethTime1()?.compareTo(hour)!! < 0 && (listPosition.gethTime2()?.compareTo(hour)!! > 0)){
             hospitalViewholderClass.hospitalTime.text = "Open"
+            flag = "0"
             hospitalViewholderClass.hospitalTime.setTextColor(Color.GREEN)
         }else{
             hospitalViewholderClass.hospitalTime.text = "Close"
+            flag = "1"
             hospitalViewholderClass.hospitalTime.setTextColor(Color.RED)
         }
 
