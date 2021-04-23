@@ -5,13 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/lightGray"
     tools:context=".SignUp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/lightGray"
         android:paddingBottom="20dp">
 
         <TextView
@@ -22,7 +22,7 @@
             android:fontFamily="@font/tinos_bold"
             android:text="Register"
             android:textColor="@color/black"
-            android:textSize="36sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -84,21 +84,22 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="16dp"
+            android:gravity="center"
             android:orientation="horizontal"
             android:paddingLeft="6dp"
-            android:paddingRight="6dp"
             app:layout_constraintEnd_toStartOf="@+id/dobBtn"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <TextView
                 android:id="@+id/dobEt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_of_edittext"
-                android:drawableStart="@drawable/ic_birthdate"
-                android:drawablePadding="10dp"
-                android:hint="dd/MM/yyyy" />
+                android:layout_gravity="center"
+                android:fontFamily="@font/tinos"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:hint="dd/MM/yyyy"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -108,7 +109,9 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:layout_weight="1"
-            android:text="::::"
+            android:fontFamily="@font/tinos"
+            android:text="Date"
+            android:drawableLeft="@drawable/ic_birthdate"
             android:textColor="@color/black"
             android:theme="@style/Button.White"
             app:layout_constraintEnd_toEndOf="parent"
@@ -214,9 +217,8 @@
             android:fontFamily="@font/tinos"
             android:text="Already Registered? Sign In"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
 
