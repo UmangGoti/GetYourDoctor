@@ -1,6 +1,7 @@
 package com.example.getyourdoctor
 
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -63,6 +64,9 @@ class ProfileMenu : Fragment() {
 
         view.editIcon.setOnClickListener {
             EditInformation(view)
+        }
+        view.setOnClickListener {
+            startActivity(Intent(context,UserTransectionActivity::class.java))
         }
 
         return view

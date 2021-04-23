@@ -65,7 +65,8 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
             intent.putExtra("HospName1", listPosition.gethName())
             intent.putExtra("HospLat1", listPosition.gethLat())
             intent.putExtra("HospLong1", listPosition.gethLong())
-
+            intent.putExtra("HospId1",listPosition.gethId())
+            intent.putExtra("HospStatus",flag)
             context.startActivity(intent)
         }
     }

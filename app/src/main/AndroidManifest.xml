@@ -15,11 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoActionBarTheme">
-        <activity android:name=".Appoinment" />
-        <activity android:name=".UserInfoActivity" />
-        <activity android:name=".RegisterActivity" />
-
-        <activity android:name=".MedicalLocationActivity"/>
+        <activity android:name=".UserTransectionActivity"></activity>
+        <activity android:name=".Appointment" />
+        <activity android:name=".MedicalLocationActivity" />
         <activity android:name=".MedicalInfo" />
 
         <meta-data
@@ -56,9 +54,7 @@
 
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_4CuHwPVPP9SJrA"
-            />
-
+            android:value="rzp_test_4CuHwPVPP9SJrA" />
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

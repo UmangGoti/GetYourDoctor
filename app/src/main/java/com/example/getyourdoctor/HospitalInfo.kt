@@ -33,14 +33,17 @@ class HospitalInfo : AppCompatActivity() {
         hpTime.text = time
 
         hpNumber.text = number
-        Toast.makeText(applicationContext, "ID "+id,Toast.LENGTH_LONG).show()
-            //floatingActionButton.visibility = View.VISIBLE
+        if(status.equals("0")) {
+            floatingActionButton.visibility = View.VISIBLE
             floatingActionButton.setOnClickListener {
                 val intent = Intent(this, Appointment::class.java)
                 intent.putExtra("HospId2", id)
                 startActivity(intent)
 
             }
+        }else{
+            floatingActionButton.visibility = View.GONE
+        }
         linearL4.setOnClickListener {
             var intent = Intent(applicationContext, HospitalLocationActivity::class.java)
             intent.putExtra("HospName2",hname)
