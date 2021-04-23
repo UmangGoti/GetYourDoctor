@@ -82,7 +82,7 @@ class ProfileMenu : Fragment() {
                 var formatter = SimpleDateFormat("dd/MM/yyyy")
                 var date = formatter.parse(snapshot.child("Dob").value.toString())
                 var dob = Calendar.getInstance()
-//                dob.time = date
+                dob.time = date
                 val dobYear = dob.get(Calendar.YEAR)
                 val dobMonth = dob.get(Calendar.MONTH)
                 val dobDay = dob.get(Calendar.DAY_OF_MONTH)
