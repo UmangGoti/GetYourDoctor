@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/NoActionBarTheme">
-        <activity android:name=".UserInfoActivity"/>
+        <activity android:name=".Appointment"></activity>
+        <activity android:name=".Appoinment" />
+        <activity android:name=".UserInfoActivity" />
         <activity android:name=".RegisterActivity" />
 
         <meta-data
@@ -47,6 +49,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_4CuHwPVPP9SJrA"
+            />
 
         <meta-data
             android:name="preloaded_fonts"

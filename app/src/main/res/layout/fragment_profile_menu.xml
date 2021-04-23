@@ -97,7 +97,7 @@
         android:id="@+id/transectionBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Transection"
+        android:text="Transaction"
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="20sp"

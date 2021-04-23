@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.IntegerRes
 import androidx.recyclerview.widget.RecyclerView
 import com.example.getyourdoctor.HospitalInfo
 import com.example.getyourdoctor.HospitalLocationActivity
@@ -43,11 +44,14 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
         val cal = Calendar.getInstance()
         val sdfHour = SimpleDateFormat("HH:mm")
         val hour: String = sdfHour.format(cal.time)
+        var flag: String = "0"
         if (listPosition.gethTime1()?.compareTo(hour)!! < 0 && (listPosition.gethTime2()?.compareTo(hour)!! > 0)){
             hospitalViewholderClass.hospitalTime.text = "Open"
+            flag = "0"
             hospitalViewholderClass.hospitalTime.setTextColor(Color.GREEN)
         }else{
             hospitalViewholderClass.hospitalTime.text = "Close"
+            flag = "1"
             hospitalViewholderClass.hospitalTime.setTextColor(Color.RED)
         }
 
@@ -58,6 +62,8 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
             intent.putExtra("HospInformation", listPosition.gethInfo())
             intent.putExtra("HospTime",listPosition.gethTime1()+" to "+listPosition.gethTime2())
             intent.putExtra("HospContact",listPosition.gethPhone().toString())
+            intent.putExtra("HospId1", listPosition.gethId())
+            intent.putExtra("HospStatus", flag)
 
             context.startActivity(intent)
         }
@@ -67,6 +73,7 @@ class HospitalAdapter(val context: Context, hospitalDataList: ArrayList<Hospital
             intent.putExtra("HospAddress", listPosition.gethAdd())
             intent.putExtra("HospLat", listPosition.gethLat())
             intent.putExtra("HospLong", listPosition.gethLong())
+
 
             context.startActivity(intent)
         }
