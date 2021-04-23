@@ -61,9 +61,11 @@ class MedicalListMenu : Fragment() {
             AdapterView.OnItemClickListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 medicalDataList = ArrayList()
+
                 var databaseRefrence1 = FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/").getReference(
                     "/Medicals/City"
                 ).child(spinnerDataList!![p2])
+
                 databaseRefrence1.addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(p0: DataSnapshot) {
                         medicalDataList!!.clear()

@@ -4,6 +4,6 @@
     <dimen name="bottom_navigation_margin">8dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_size_of_label">18dp</dimen>
-    <dimen name="text_size_of_hospital_label">35dp</dimen>
+    <dimen name="text_size_of_hospital_label">32dp</dimen>
     <dimen name="text_size_of_hospitalinfo_label">45dp</dimen>
 </resources>
