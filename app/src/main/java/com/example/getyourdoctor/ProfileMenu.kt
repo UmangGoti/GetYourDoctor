@@ -1,6 +1,4 @@
 package com.example.getyourdoctor
-
-
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -79,23 +77,23 @@ class ProfileMenu : Fragment() {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onDataChange(snapshot: DataSnapshot) {
 
-                view.userName.text = snapshot.child("Name").value.toString()
+                view.userName.text = snapshot.child("uName").value.toString()
                 view.userName.setSingleLine()
                 view.userName.isSelected = true
 
                 var formatter = SimpleDateFormat("dd/MM/yyyy")
-                var date = formatter.parse(snapshot.child("Dob").value.toString())
+                var date = formatter.parse(snapshot.child("uDob").value.toString())
                 var dob = Calendar.getInstance()
                 dob.time = date
                 val dobYear = dob.get(Calendar.YEAR)
                 val dobMonth = dob.get(Calendar.MONTH)
                 val dobDay = dob.get(Calendar.DAY_OF_MONTH)
                 var age = getAge(dobYear, dobMonth, dobDay)
-                view.userAge.text = age + " (" + snapshot.child("Dob").value.toString() + ")"
+                view.userAge.text = age + " (" + snapshot.child("uDob").value.toString() + ")"
 
-                view.userContact.text = snapshot.child("Contact").value.toString()
+                view.userContact.text = snapshot.child("uContact").value.toString()
 
-                view.userEmail.text = snapshot.child("Email").value.toString()
+                view.userEmail.text = snapshot.child("uEmail").value.toString()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -145,9 +143,9 @@ class ProfileMenu : Fragment() {
         userreference?.addValueEventListener(object : ValueEventListener {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onDataChange(snapshot: DataSnapshot) {
-                view.userNameEt.setText(snapshot.child("Name").value.toString())
-                view.userDobEt.setText(snapshot.child("Dob").value.toString())
-                view.userContactEt.setText(snapshot.child("Contact").value.toString())
+                view.userNameEt.setText(snapshot.child("uName").value.toString())
+                view.userDobEt.setText(snapshot.child("uDob").value.toString())
+                view.userContactEt.setText(snapshot.child("uContact").value.toString())
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -162,9 +160,9 @@ class ProfileMenu : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val key = snapshot.key
                     if (key != null && (view.userNameEt.text.toString()).isNotEmpty() && (view.userContactEt.text.toString()).isNotEmpty() && (view.userDobEt.text.toString()).isNotEmpty()) {
-                        userreference.child("Name").setValue(view.userNameEt.text.toString())
-                        userreference.child("Dob").setValue(view.userDobEt.text.toString())
-                        userreference.child("Contact").setValue(view.userContactEt.text.toString())
+                        userreference.child("uName").setValue(view.userNameEt.text.toString())
+                        userreference.child("uDob").setValue(view.userDobEt.text.toString())
+                        userreference.child("uContact").setValue(view.userContactEt.text.toString())
                         flag = 1
                     } else {
                         flag = 0

@@ -92,8 +92,9 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
                 appointmentDate.setError("Appointment Date  is required.")
             }
             else {
+                val uid = FirebaseAuth.getInstance().currentUser!!.getUid()
                 val currentUserDb=databaseReference?.child(paymentId)
-                if(currentUserDb!=null){
+                if(uid!=null){
                     startPayment(currentUserDb)
                 }else{
                     Toast.makeText(applicationContext, "Do Login First", Toast.LENGTH_LONG).show()
@@ -144,7 +145,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
         currentUserDb?.child("Age")?.setValue(ageAEt.text.toString())
         currentUserDb?.child("BookingDate")?.setValue(formatted)
         currentUserDb?.child("AppointmentDate")?.setValue(adAEt.text.toString())
-        currentUserDb?.child("Payment Status")?.setValue(paymentStatus)
+        currentUserDb?.child("PaymentStatus")?.setValue(paymentStatus)
         currentUserDb?.child("UserID")?.setValue(uid)
         currentUserDb?.child("HospitalID")?.setValue(id1)
         var fragmentTransaction = supportFragmentManager?.beginTransaction().replace(R.id.homeframeLayout,CityHospitalListMenu())
@@ -170,7 +171,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
         currentUserDb?.child("Age")?.setValue(ageAEt.text.toString())
         currentUserDb?.child("BookingDate")?.setValue(formatted)
         currentUserDb?.child("AppointmentDate")?.setValue(adAEt.text.toString())
-        currentUserDb?.child("Payment Status")?.setValue(paymentStatus)
+        currentUserDb?.child("PaymentStatus")?.setValue(paymentStatus)
         currentUserDb?.child("UserID")?.setValue(uid)
         currentUserDb?.child("HospitalID")?.setValue(id1)
         startActivity(Intent(this@Appointment,UserTransectionActivity::class.java))
