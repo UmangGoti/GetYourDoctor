@@ -37,6 +37,7 @@ class HospitalInfo : AppCompatActivity() {
             floatingActionButton.visibility = View.VISIBLE
             floatingActionButton.setOnClickListener {
                 val intent = Intent(this, Appointment::class.java)
+                intent.putExtra("HospName2",hname)
                 intent.putExtra("HospId2", id)
                 startActivity(intent)
 

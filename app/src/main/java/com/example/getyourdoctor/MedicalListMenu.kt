@@ -19,7 +19,6 @@ import kotlinx.android.synthetic.main.fragment_city_hospital_list_menu.view.*
 
 class MedicalListMenu : Fragment() {
     lateinit var databaseRefrence: DatabaseReference
-    lateinit var i: Intent
     var medicalDataList: ArrayList<MedicalData>? = null
     var spinnerDataList:ArrayList<String>? = null
     override fun onCreate(savedInstanceState: Bundle?) {

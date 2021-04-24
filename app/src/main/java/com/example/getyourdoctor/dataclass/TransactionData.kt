@@ -9,6 +9,7 @@ class TransactionData{
     private var tName: String? = null
     private var tPaymentStatus: String? =  null
     private var tUserID: String? = null
+    private var tHospitalName: String? = null
 
     fun gettAge(): String? {
         return tAge
@@ -73,4 +74,12 @@ class TransactionData{
     fun settUserID(tUserID: String?) {
         this.tUserID = tUserID
     }
+    fun gettHospitalName(): String? {
+        return tHospitalName
+    }
+
+    fun settHospitalName(tHospitalName: String?) {
+        this.tHospitalName = tHospitalName
+    }
+
 }

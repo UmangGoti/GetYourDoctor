@@ -1,7 +1,6 @@
 package com.example.getyourdoctor.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -11,8 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.getyourdoctor.R
 import com.example.getyourdoctor.dataclass.TransactionData
 
-class TransactionAdapter (
-    val context: Context, transactionDataList: ArrayList<TransactionData>) : RecyclerView.Adapter<TransactionAdapter.TransactionViewholderClass>()
+class TransactionAdapter (val context: Context, transactionDataList: ArrayList<TransactionData>) : RecyclerView.Adapter<TransactionAdapter.TransactionViewholderClass>()
     {
 
         private var transactionDataList: ArrayList<TransactionData>? = null
@@ -33,16 +31,16 @@ class TransactionAdapter (
         override fun onBindViewHolder(holder: TransactionAdapter.TransactionViewholderClass, position: Int) {
             val transactionViewholderClass = holder
             val listPosition = transactionDataList!![position]
-            transactionViewholderClass.hId.text =listPosition.gettHospitalID()
+            transactionViewholderClass.hId.text =listPosition.gettHospitalName()
             transactionViewholderClass.tAt.text = listPosition.gettAppointmentDate()
             transactionViewholderClass.tBt.text = listPosition.gettBookingDate()
 
             if (listPosition.gettPaymentStatus().equals("Authorized")){
-                transactionViewholderClass.tStatus.text = "Authorized"
-                transactionViewholderClass.tStatus.setTextColor(Color.GREEN)
+                transactionViewholderClass.tstatus.text = "Authorized"
+                transactionViewholderClass.tstatus.setTextColor(Color.GREEN)
             }else{
-                transactionViewholderClass.tStatus.text = "Failed"
-                transactionViewholderClass.tStatus.setTextColor(Color.RED)
+                transactionViewholderClass.tstatus.text = "Failed"
+                transactionViewholderClass.tstatus.setTextColor(Color.RED)
             }
 
         }
@@ -51,12 +49,12 @@ class TransactionAdapter (
             var hId: TextView
             var tAt: TextView
             var tBt: TextView
-            var tStatus: TextView
+            var tstatus: TextView
             init {
-                hId = itemView.findViewById(R.id.hospitalName)
-                tAt = itemView.findViewById(R.id.tAppointmentDate)
-                tBt = itemView.findViewById(R.id.tBookingDate)
-                tStatus = itemView.findViewById(R.id.tStatus)
+                hId = itemView.findViewById(R.id.thospName)
+                tAt = itemView.findViewById(R.id.tAppoDate)
+                tBt = itemView.findViewById(R.id.tbookingDate)
+                tstatus = itemView.findViewById(R.id.tstatusInfo)
             }
         }
         init {
