@@ -31,6 +31,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
     var paymentStatus = String()
     var paymentId = String()
     var id1: String? = null
+    var hname1: String? = null
     lateinit var auth: FirebaseAuth
     var databaseReference: DatabaseReference? =null
     var database: FirebaseDatabase? =null
@@ -51,6 +52,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
         Checkout.preload(applicationContext)
 
         id1 = intent.getStringExtra("HospId2")
+        hname1 = intent.getStringExtra("HospName2")
         adBtn.setOnClickListener{
             val calendar: Calendar = Calendar.getInstance()
             val datePicker = DatePickerDialog(this, DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
@@ -148,6 +150,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
         currentUserDb?.child("tPaymentStatus")?.setValue(paymentStatus)
         currentUserDb?.child("tUserID")?.setValue(uid)
         currentUserDb?.child("tHospitalID")?.setValue(id1)
+        currentUserDb?.child("tHospitalName")?.setValue(hname1)
         var fragmentTransaction = supportFragmentManager?.beginTransaction().replace(R.id.homeframeLayout,CityHospitalListMenu())
         fragmentTransaction?.commit()
         finish()
@@ -174,6 +177,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
         currentUserDb?.child("tPaymentStatus")?.setValue(paymentStatus)
         currentUserDb?.child("tUserID")?.setValue(uid)
         currentUserDb?.child("tHospitalID")?.setValue(id1)
+        currentUserDb?.child("tHospitalName")?.setValue(hname1)
         startActivity(Intent(this@Appointment,UserTransectionActivity::class.java))
         finish()
     }
