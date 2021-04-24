@@ -32,14 +32,15 @@ class TransactionAdapter (val context: Context, transactionDataList: ArrayList<T
             val transactionViewholderClass = holder
             val listPosition = transactionDataList!![position]
             transactionViewholderClass.hId.text =listPosition.gettHospitalName()
-            transactionViewholderClass.tAt.text = listPosition.gettAppointmentDate()
-            transactionViewholderClass.tBt.text = listPosition.gettBookingDate()
+            transactionViewholderClass.tPname.text = "Patient Name: "+listPosition.gettName()
+            transactionViewholderClass.tAt.text = "Appointment Date: "+listPosition.gettAppointmentDate()
+            transactionViewholderClass.tBt.text = "Booking Date: "+listPosition.gettBookingDate()
 
             if (listPosition.gettPaymentStatus().equals("Authorized")){
-                transactionViewholderClass.tstatus.text = "Authorized"
+                transactionViewholderClass.tstatus.text = "Appointment: Authorized"
                 transactionViewholderClass.tstatus.setTextColor(Color.GREEN)
             }else{
-                transactionViewholderClass.tstatus.text = "Failed"
+                transactionViewholderClass.tstatus.text = "Appointment: Failed"
                 transactionViewholderClass.tstatus.setTextColor(Color.RED)
             }
 
@@ -50,8 +51,10 @@ class TransactionAdapter (val context: Context, transactionDataList: ArrayList<T
             var tAt: TextView
             var tBt: TextView
             var tstatus: TextView
+            var tPname: TextView
             init {
                 hId = itemView.findViewById(R.id.thospName)
+                tPname = itemView.findViewById(R.id.tPName)
                 tAt = itemView.findViewById(R.id.tAppoDate)
                 tBt = itemView.findViewById(R.id.tbookingDate)
                 tstatus = itemView.findViewById(R.id.tstatusInfo)
