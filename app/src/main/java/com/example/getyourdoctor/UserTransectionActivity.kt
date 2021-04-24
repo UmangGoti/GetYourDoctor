@@ -30,6 +30,7 @@ class UserTransectionActivity : AppCompatActivity() {
             override fun onDataChange(p0: DataSnapshot) {
                 //transactionDataList!!.clear()
                 for (datasnapshot: DataSnapshot in p0.children) {
+                    Toast.makeText(applicationContext," "+datasnapshot,Toast.LENGTH_LONG).show()
                     var transactionData = datasnapshot.getValue(TransactionData::class.java)
 //                    if (transactionData != null) {
 //                        Toast.makeText(applicationContext, uid+transactionData.getUserID(), Toast.LENGTH_LONG).show()

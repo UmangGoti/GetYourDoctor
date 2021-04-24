@@ -63,7 +63,7 @@ class ProfileMenu : Fragment() {
         view.editIcon.setOnClickListener {
             EditInformation(view)
         }
-        view.setOnClickListener {
+        view.transectionBtn.setOnClickListener {
             startActivity(Intent(context,UserTransectionActivity::class.java))
         }
 
