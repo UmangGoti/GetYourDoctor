@@ -26,11 +26,10 @@ class UserTransectionActivity : AppCompatActivity() {
         transactionDataList = ArrayList()
         mDatabase.addValueEventListener(object: ValueEventListener{
             override fun onDataChange(p0: DataSnapshot) {
+                transactionDataList!!.clear()
                 for (datasnapshot: DataSnapshot in p0.children) {
-                    Log.i("User Transection",datasnapshot.key)
                     var transactionData = datasnapshot.getValue(TransactionData::class.java)
                     if(transactionData!!.gettUserID().equals(uid)) {
-//                            transactionData.gettHospitalID()
                         (transactionDataList as ArrayList<TransactionData>).add(transactionData!! as TransactionData)
                     }
                 }

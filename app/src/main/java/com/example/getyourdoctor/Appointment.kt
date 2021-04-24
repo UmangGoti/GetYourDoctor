@@ -140,7 +140,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
             paymentStatus = "Failed"
         }
         val uid = FirebaseAuth.getInstance().currentUser!!.getUid()
-        val currentUserDb=databaseReference?.child(paymentId)
+        val currentUserDb=databaseReference?.push()
 
         currentUserDb?.child("tName")?.setValue(userNameAEt.text.toString())
         currentUserDb?.child("tContact")?.setValue(contactAEt.text.toString())
