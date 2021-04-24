@@ -79,15 +79,15 @@ class SignUp : Fragment() {
                         if (task.isSuccessful) {
                             val currentUser = auth.currentUser
                             val currentUserDb=databaseReference?.child((currentUser?.uid!!))
-                            currentUserDb?.child("Name")?.setValue(userNameEt.text.toString())
-                            currentUserDb?.child("Contact")?.setValue(contactEt.text.toString())
-                            currentUserDb?.child("Dob")?.setValue(dobEt.text.toString())
-                            currentUserDb?.child("Email")?.setValue(emailEt.text.toString())
+                            currentUserDb?.child("uName")?.setValue(userNameEt.text.toString())
+                            currentUserDb?.child("uContact")?.setValue(contactEt.text.toString())
+                            currentUserDb?.child("uDob")?.setValue(dobEt.text.toString())
+                            currentUserDb?.child("uEmail")?.setValue(emailEt.text.toString())
 
 
                             var checkedId = view.radioGrp.checkedRadioButtonId
                             val gender = view.findViewById<RadioButton>(checkedId)
-                            currentUserDb?.child("Gender")?.setValue(gender.text)
+                            currentUserDb?.child("uGender")?.setValue(gender.text)
 
                             Toast.makeText(context,"Sign Up successful", Toast.LENGTH_SHORT).show()
 
