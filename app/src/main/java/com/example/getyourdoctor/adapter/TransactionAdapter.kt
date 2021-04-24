@@ -32,9 +32,9 @@ class TransactionAdapter (val context: Context, transactionDataList: ArrayList<T
             val transactionViewholderClass = holder
             val listPosition = transactionDataList!![position]
             transactionViewholderClass.hId.text =listPosition.gettHospitalName()
-            transactionViewholderClass.tPname.text = "Patient Name: "+listPosition.gettName()
-            transactionViewholderClass.tAt.text = "Appointment Date: "+listPosition.gettAppointmentDate()
-            transactionViewholderClass.tBt.text = "Booking Date: "+listPosition.gettBookingDate()
+            transactionViewholderClass.tPname.text = listPosition.gettName()
+            transactionViewholderClass.tAt.text = listPosition.gettAppointmentDate()
+            transactionViewholderClass.tBt.text = listPosition.gettBookingDate()
 
             if (listPosition.gettPaymentStatus().equals("Authorized")){
                 transactionViewholderClass.tstatus.text = "Appointment: Authorized"
@@ -54,6 +54,8 @@ class TransactionAdapter (val context: Context, transactionDataList: ArrayList<T
             var tPname: TextView
             init {
                 hId = itemView.findViewById(R.id.thospName)
+                hId.setSingleLine()
+                hId.isSelected = true
                 tPname = itemView.findViewById(R.id.tPName)
                 tAt = itemView.findViewById(R.id.tAppoDate)
                 tBt = itemView.findViewById(R.id.tbookingDate)
