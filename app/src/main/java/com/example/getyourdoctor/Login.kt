@@ -1,6 +1,5 @@
 package com.example.getyourdoctor
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -57,6 +56,11 @@ class Login : Fragment() {
 
         view.registerTv.setOnClickListener {
             fragmentTransaction?.replace(R.id.homeframeLayout,SignUp())
+            fragmentTransaction?.remove(this)
+            fragmentTransaction?.commit()
+        }
+        view.hospitalTv.setOnClickListener {
+            fragmentTransaction?.replace(R.id.homeframeLayout,HospitalLoginFragment())
             fragmentTransaction?.remove(this)
             fragmentTransaction?.commit()
         }
