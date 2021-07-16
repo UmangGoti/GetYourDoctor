@@ -9,7 +9,6 @@ import android.util.Log
 import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -119,7 +118,7 @@ class Appointment : AppCompatActivity(), PaymentResultListener {
 
             val prefill = JSONObject()
             prefill.put("email", "test@razorpay.com")
-            prefill.put("contact", "8155837716")
+            prefill.put("contact", "Number")
 
             options.put("prefill", prefill)
             co.open(activity, options)
