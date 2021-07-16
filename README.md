@@ -23,3 +23,11 @@
 </ul>
 
 
+| | | | |
+|:----:|:----:|:----:|:----:|
+|<img altr="1" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Home_ss1.jpg">|<img altr="2" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Home_ss2.jpg">|<img altr="3" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/HospitalInfo_ss.jpg">|<img altr="4" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Medicals_ss.jpg">|
+| | | | |
+|<img altr="5" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Login_ss.jpg">|<img altr="6" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Register_ss.jpg">|<img altr="7" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Payment_ss.jpg">|<img altr="8" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/AppointmentInfo_ss.jpg">|
+
+
+
