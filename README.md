@@ -7,7 +7,7 @@
   <li>Users need to pay minimum charges for Booking Appointments of a chosen Hospital, and Possible to book an appointment on any date and time(Present to Next).</li>
   <li>Users also get the History of Booked Appointments with times and dates.</li>
   <li>App also shows the medicals of particulars city with open/close status, direction to it.</li>
-	<li>Razorpay payment gateway provides different Payment Methods. Users can Pay Accordingly thair Own Choice.</li>
+  <li>razorpay payment gateway provides different payment methods. Users can pay accordingly to their own choice.</li>
 </ul>
 
 
@@ -21,3 +21,5 @@
 	<li>recyclerview-adapter</li>
 	<li>google maps api</li>
 </ul>
+
+
