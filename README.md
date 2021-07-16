@@ -30,4 +30,14 @@
 |<img altr="5" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Login_ss.jpg">|<img altr="6" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Register_ss.jpg">|<img altr="7" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/Payment_ss.jpg">|<img altr="8" src="https://github.com/UmangGoti/GetYourDoctor/blob/develop/Screenshot/AppointmentInfo_ss.jpg">|
 
 
+## Contributors
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/UmangGoti"><img src="https://avatars3.githubusercontent.com/u/64679424?v=4" width="100px;" alt=""/><br /><sub><b>UmangGoti</b></sub></a><br /><a href="https://github.com/UmangGoti/GetYourDoctor?author=UmangGoti" title="Code">💻</a></td>
+	  <td align="center"><a href="https://github.com/MustafaGangardiwala"><img src="https://avatars.githubusercontent.com/u/47807502?v=4" width="100px;" alt=""/><br /><sub><b>MustafaGangardiwala</b></sub></a><br /><a href="https://github.com/UmangGoti/GetYourDoctor?author=MustafaGangardiwala" title="Code">💻</a></td>
+	  <td align="center"><a href="https://github.com/DevamDesai"><img src="https://avatars.githubusercontent.com/u/68585699?v=4" width="100px;" alt=""/><br /><sub><b>DevamDesai</b></sub></a><br /><a href="https://github.com/UmangGoti/GetYourDoctor?author=DevamDesai" title="Code">💻</a></td>
+  </tr>
+</table>
+
 
