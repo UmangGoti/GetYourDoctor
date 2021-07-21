@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     android:orientation="vertical"
     app:cardCornerRadius="10dp"
     app:cardElevation="2dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/mName"
@@ -22,14 +22,16 @@
             android:fontFamily="@font/tinos"
             android:textColor="@color/black"
             android:textSize="@dimen/text_size_of_hospital_label" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
-                android:src="@drawable/ic_time_icon"/>
+                android:src="@drawable/ic_time_icon" />
 
             <TextView
                 android:id="@+id/mTime"
@@ -39,8 +41,7 @@
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginBottom="2dp"
-                android:textSize="@dimen/text_size_of_label"
-                />
+                android:textSize="@dimen/text_size_of_label" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

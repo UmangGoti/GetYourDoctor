@@ -17,19 +17,18 @@
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
 
         android:id="@+id/checkbox1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Book For Yourself"
         android:layout_marginStart="32dp"
-        android:textSize="20sp"
         android:checked="false"
-        app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+        android:text="Book For Yourself"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
@@ -50,7 +49,7 @@
             android:background="@color/white"
             android:drawableStart="@drawable/ic_person"
             android:hint="Full Name"
-            android:inputType="text"/>
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -75,7 +74,7 @@
             android:drawableStart="@drawable/ic_call"
             android:hint="Mobile"
             android:inputType="number"
-            android:maxLength="10"/>
+            android:maxLength="10" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -99,7 +98,7 @@
             android:drawableStart="@drawable/ic_birthdate"
             android:hint="Current Age"
             android:inputType="number"
-            android:maxLength="3"/>
+            android:maxLength="3" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -121,8 +120,8 @@
             android:id="@+id/adAEt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
             android:layout_marginTop="32dp"
+            android:background="@color/white"
             android:drawableStart="@drawable/ic_birthdate" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -141,12 +140,12 @@
         android:id="@+id/payBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="Pay"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="30dp"
-        android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/adBtn"/>
+        app:layout_constraintTop_toBottomOf="@+id/adBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

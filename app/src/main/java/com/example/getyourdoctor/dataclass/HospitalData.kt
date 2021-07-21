@@ -1,6 +1,6 @@
 package com.example.getyourdoctor.dataclass
 
-class HospitalData{
+class HospitalData {
     private var hName: String? = null
     private var hAdd: String? = null
     private var hId: String? = null
@@ -9,13 +9,13 @@ class HospitalData{
     private var hLong: Double? = null
     private var hTime1: String? = null
     private var hTime2: String? = null
-    private  var hPhone: String? =  null
+    private var hPhone: String? = null
 
     fun gethId(): String? {
         return hId
     }
 
-    fun sethId(hId: String?)  {
+    fun sethId(hId: String?) {
         this.hId = hId
     }
 

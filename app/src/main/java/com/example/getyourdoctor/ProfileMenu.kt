@@ -1,4 +1,5 @@
 package com.example.getyourdoctor
+
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -11,8 +12,7 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*import kotlinx.android.synthetic.main.activity_hospital_info.*
-import kotlinx.android.synthetic.main.fragment_profile_menu.*
+import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.fragment_profile_menu.view.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -20,10 +20,10 @@ import java.util.*
 
 class ProfileMenu : Fragment() {
 
-    lateinit var auth:FirebaseAuth
-    var databaseReference: DatabaseReference? =null
-    var database: FirebaseDatabase? =null
-    val fragmentTransaction:FragmentTransaction? = null
+    lateinit var auth: FirebaseAuth
+    var databaseReference: DatabaseReference? = null
+    var database: FirebaseDatabase? = null
+    val fragmentTransaction: FragmentTransaction? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
@@ -38,18 +38,19 @@ class ProfileMenu : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view: View =  inflater.inflate(R.layout.fragment_profile_menu, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_profile_menu, container, false)
         auth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/")
+        database =
+            FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/")
         databaseReference = database?.reference!!.child("UserInfo")
         val currentuser = auth.currentUser
         val fragmentTransaction = fragmentManager?.beginTransaction()
 
-        if(currentuser == null){
+        if (currentuser == null) {
             fragmentTransaction?.replace(R.id.homeframeLayout, Login())
             fragmentTransaction?.remove(this)
             fragmentTransaction?.commit()
-        }else{
+        } else {
             loadprofile(view)
         }
 
@@ -64,13 +65,13 @@ class ProfileMenu : Fragment() {
             EditInformation(view)
         }
         view.transectionBtn.setOnClickListener {
-            startActivity(Intent(context,UserTransectionActivity::class.java))
+            startActivity(Intent(context, UserTransectionActivity::class.java))
         }
 
         return view
     }
 
-    private fun loadprofile(view: View){
+    private fun loadprofile(view: View) {
         val user = auth.currentUser
         val userreference = databaseReference?.child(user?.uid!!)
         userreference?.addValueEventListener(object : ValueEventListener {
@@ -114,9 +115,9 @@ class ProfileMenu : Fragment() {
         return ageInt.toString()
     }
 
-    private fun EditInformation(view: View){
+    private fun EditInformation(view: View) {
         view.userName.visibility = View.GONE
-        view.editIcon.visibility =View.GONE
+        view.editIcon.visibility = View.GONE
         view.ageIcon.visibility = View.GONE
         view.userAge.visibility = View.GONE
         view.callIcon.visibility = View.GONE
@@ -155,7 +156,7 @@ class ProfileMenu : Fragment() {
         view.updateBtn.setOnClickListener {
             val user = auth.currentUser
             val userreference = databaseReference?.child(user?.uid!!)
-            var flag:Int = 0
+            var flag: Int = 0
             userreference?.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val key = snapshot.key

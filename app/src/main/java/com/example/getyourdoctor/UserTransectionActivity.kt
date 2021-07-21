@@ -1,8 +1,7 @@
 package com.example.getyourdoctor
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.getyourdoctor.adapter.TransactionAdapter
@@ -19,17 +18,21 @@ class UserTransectionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_transection)
-        mDatabase = FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/").getReference("Transaction")
-        mHospital = FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/").getReference()
+        mDatabase =
+            FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/")
+                .getReference("Transaction")
+        mHospital =
+            FirebaseDatabase.getInstance("https://getyourdoctor-acf57-default-rtdb.firebaseio.com/")
+                .getReference()
         var mRecyclerView: RecyclerView = findViewById(R.id.transactionRecycleview)
         mRecyclerView.layoutManager = LinearLayoutManager(applicationContext)
         transactionDataList = ArrayList()
-        mDatabase.addValueEventListener(object: ValueEventListener{
+        mDatabase.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 transactionDataList!!.clear()
                 for (datasnapshot: DataSnapshot in p0.children) {
                     var transactionData = datasnapshot.getValue(TransactionData::class.java)
-                    if(transactionData!!.gettUserID().equals(uid)) {
+                    if (transactionData!!.gettUserID().equals(uid)) {
                         (transactionDataList as ArrayList<TransactionData>).add(transactionData!! as TransactionData)
                     }
                 }
@@ -42,6 +45,7 @@ class UserTransectionActivity : AppCompatActivity() {
                 mRecyclerView.adapter = transactionAdapter
                 transactionAdapter?.notifyDataSetChanged()
             }
+
             override fun onCancelled(p0: DatabaseError) {
                 TODO("Not yet implemented")
             }

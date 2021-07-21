@@ -1,11 +1,9 @@
 package com.example.getyourdoctor
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_hospital_info.*
 
 class HospitalInfo : AppCompatActivity() {
@@ -20,8 +18,8 @@ class HospitalInfo : AppCompatActivity() {
         val number = intent.getStringExtra("HospContact")
         val status = intent.getStringExtra("HospStatus")
         val hname = intent.getStringExtra("HospName1")
-        val latitude:Double = intent.getDoubleExtra("HospLat1",21.22)
-        val longitude:Double = intent.getDoubleExtra("HospLong1",73.22)
+        val latitude: Double = intent.getDoubleExtra("HospLat1", 21.22)
+        val longitude: Double = intent.getDoubleExtra("HospLong1", 73.22)
         hpName.text = name
         hpName.setSingleLine()
         hpName.isSelected = true
@@ -33,21 +31,21 @@ class HospitalInfo : AppCompatActivity() {
         hpTime.text = time
 
         hpNumber.text = number
-        if(status.equals("0")) {
+        if (status.equals("0")) {
             floatingActionButton.visibility = View.VISIBLE
             floatingActionButton.setOnClickListener {
                 val intent = Intent(this, Appointment::class.java)
-                intent.putExtra("HospName2",hname)
+                intent.putExtra("HospName2", hname)
                 intent.putExtra("HospId2", id)
                 startActivity(intent)
 
             }
-        }else{
+        } else {
             floatingActionButton.visibility = View.GONE
         }
         linearL4.setOnClickListener {
             var intent = Intent(applicationContext, HospitalLocationActivity::class.java)
-            intent.putExtra("HospName2",hname)
+            intent.putExtra("HospName2", hname)
             intent.putExtra("HospLat2", latitude)
             intent.putExtra("HospLong2", longitude)
 

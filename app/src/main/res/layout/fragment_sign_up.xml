@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -34,9 +33,9 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="25dp"
             android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
             android:paddingLeft="6dp"
             android:paddingRight="6dp"
-            android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userProfile">
@@ -46,10 +45,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border_of_edittext"
-                android:outlineAmbientShadowColor="@color/white"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="10dp"
-                android:hint="Name" />
+                android:hint="Name"
+                android:outlineAmbientShadowColor="@color/white" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -97,9 +96,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/tinos"
+                android:hint="dd/MM/yyyy"
                 android:textColor="@color/black"
-                android:textSize="25dp"
-                android:hint="dd/MM/yyyy"/>
+                android:textSize="25dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -109,9 +108,9 @@
             android:layout_marginTop="32dp"
             android:layout_marginEnd="32dp"
             android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_birthdate"
             android:fontFamily="@font/tinos"
             android:text="Date"
-            android:drawableLeft="@drawable/ic_birthdate"
             android:textColor="@color/black"
             android:theme="@style/Button.White"
             app:layout_constraintEnd_toEndOf="parent"
@@ -132,17 +131,17 @@
                 android:id="@+id/maleRBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="@color/colorPrimaryDark"
                 android:checked="true"
-                android:text="Male"
-                android:buttonTint="@color/colorPrimaryDark"/>
+                android:text="Male" />
 
             <RadioButton
                 android:id="@+id/femaleRBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="Female"
-                android:buttonTint="@color/colorPrimaryDark"/>
+                android:buttonTint="@color/colorPrimaryDark"
+                android:text="Female" />
         </RadioGroup>
 
         <com.google.android.material.textfield.TextInputLayout

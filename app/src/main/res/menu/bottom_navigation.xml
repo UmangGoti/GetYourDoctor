@@ -4,12 +4,12 @@
         android:id="@+id/hospitalsEnabled"
         android:icon="@drawable/hospital_icon_selector"
         android:iconTintMode="multiply"
-        android:title="Hospitals"/>
+        android:title="Hospitals" />
 
     <item
         android:id="@+id/medicalsDisabled"
         android:icon="@drawable/medical_icon_selector"
-        android:title="Medicals"/>
+        android:title="Medicals" />
 
     <item
         android:id="@+id/profileDisabled"

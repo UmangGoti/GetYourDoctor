@@ -1,13 +1,13 @@
 package com.example.getyourdoctor.dataclass
 
-class TransactionData{
+class TransactionData {
     private var tAge: String? = null
     private var tAppointmentDate: String? = null
     private var tBookingDate: String? = null
     private var tContact: String? = null
     private var tHospitalID: String? = null
     private var tName: String? = null
-    private var tPaymentStatus: String? =  null
+    private var tPaymentStatus: String? = null
     private var tUserID: String? = null
     private var tHospitalName: String? = null
 
@@ -74,6 +74,7 @@ class TransactionData{
     fun settUserID(tUserID: String?) {
         this.tUserID = tUserID
     }
+
     fun gettHospitalName(): String? {
         return tHospitalName
     }
