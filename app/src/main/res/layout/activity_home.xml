@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="5dp"
             android:layout_gravity="bottom"
-            android:background="@drawable/ic_shadow"/>
+            android:background="@drawable/ic_shadow" />
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

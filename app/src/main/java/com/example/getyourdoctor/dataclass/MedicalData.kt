@@ -7,7 +7,7 @@ class MedicalData {
     private var mLong: Double? = null
     private var mTime1: String? = null
     private var mTime2: String? = null
-    private  var mPhone: String? =  null
+    private var mPhone: String? = null
 
     fun getmName(): String? {
         return mName

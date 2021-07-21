@@ -1,7 +1,7 @@
 package com.example.getyourdoctor
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -10,7 +10,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 
 
-class HospitalLocationActivity : AppCompatActivity(),  OnMapReadyCallback  {
+class HospitalLocationActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
 
@@ -30,7 +30,7 @@ class HospitalLocationActivity : AppCompatActivity(),  OnMapReadyCallback  {
         var latitude: Double = intent.getDoubleExtra("HospLat2", 21.22)
         var longitude: Double = intent.getDoubleExtra("HospLong2", 73.22)
         val destination = LatLng(latitude, longitude)
-        var name:String = intent.getStringExtra("HospName2")
+        var name: String = intent.getStringExtra("HospName2")
         val markerDestination = MarkerOptions()
             .position(destination)
             .title(name)

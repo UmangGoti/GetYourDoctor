@@ -9,9 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.getyourdoctor.R
 import com.example.getyourdoctor.dataclass.HospitalAppointmentData
 
-class HospitalAppointmentAdapter(val context: Context, hospitalAppointmentDataList: ArrayList<HospitalAppointmentData>) : RecyclerView.Adapter<HospitalAppointmentAdapter.HospitalAppointmentViewholderClass>() {
+class HospitalAppointmentAdapter(
+    val context: Context,
+    hospitalAppointmentDataList: ArrayList<HospitalAppointmentData>
+) : RecyclerView.Adapter<HospitalAppointmentAdapter.HospitalAppointmentViewholderClass>() {
     private var hospitalAppointmentDataList: ArrayList<HospitalAppointmentData>? = null
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HospitalAppointmentAdapter.HospitalAppointmentViewholderClass  {
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): HospitalAppointmentAdapter.HospitalAppointmentViewholderClass {
         val view: View = LayoutInflater.from(parent.context).inflate(
             R.layout.appointment_info,
             parent,
@@ -30,19 +36,22 @@ class HospitalAppointmentAdapter(val context: Context, hospitalAppointmentDataLi
         hospitalAppointmentViewholderClass.page.text = listPosition.gettAge()
         hospitalAppointmentViewholderClass.pcontact.text = listPosition.gettContact()
         hospitalAppointmentViewholderClass.pbookingdate.text = listPosition.gettBookingDate()
-        hospitalAppointmentViewholderClass.pappointmentdate.text = listPosition.gettAppointmentDate()
+        hospitalAppointmentViewholderClass.pappointmentdate.text =
+            listPosition.gettAppointmentDate()
     }
 
     override fun getItemCount(): Int {
-        return  hospitalAppointmentDataList?.size!!
+        return hospitalAppointmentDataList?.size!!
     }
 
-    inner class HospitalAppointmentViewholderClass(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class HospitalAppointmentViewholderClass(itemView: View) :
+        RecyclerView.ViewHolder(itemView) {
         var pname: TextView
         var page: TextView
         var pcontact: TextView
         var pbookingdate: TextView
         var pappointmentdate: TextView
+
         init {
             pname = itemView.findViewById(R.id.hPName)
             pname.setSingleLine()
